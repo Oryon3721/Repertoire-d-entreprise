@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ajout Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AjoutController" customModule="Repertoire_d_entreprise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Url-au-wSa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7J-Wk-NqV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="375" id="aR2-l3-wPx"/>
+                                            <constraint firstAttribute="height" constant="128" id="wwx-GI-F1y"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jql-Kt-XLG" customClass="ImageArrondie" customModule="Repertoire_d_entreprise" customModuleProvider="target">
+                                        <rect key="frame" x="97.5" y="206" width="180" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="DsV-Ie-PVy"/>
+                                            <constraint firstAttribute="height" constant="180" id="dO3-cv-VO6"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXP-hK-r0X">
+                                        <rect key="frame" x="8" y="136" width="359" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="zbR-qB-F4U"/>
+                                        </constraints>
+                                        <state key="normal" title="Vous ne trouvez pas votre entreprise ?  ">
+                                            <color key="titleColor" red="0.64728743654822329" green="0.047261890877438859" blue="0.0048084340153051273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ajouterPersonneEntreprise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DAf-sx-I47"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hyh-zr-pvb">
+                                        <rect key="frame" x="20" y="406" width="335" height="180"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qsf-xH-WRE">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VsL-qJ-ViJ">
+                                                <rect key="frame" x="0.0" y="50" width="335" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-gC-AVo">
+                                                <rect key="frame" x="0.0" y="100" width="335" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efS-zd-b2b">
+                                                <rect key="frame" x="0.0" y="150" width="335" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="RW4-vp-Ave"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HI4-fu-8c6" customClass="ButtonArrondie" customModule="Repertoire_d_entreprise" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="616" width="335" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="tX7-Kk-f88"/>
+                                        </constraints>
+                                        <state key="normal" title="Ajouter la personne"/>
+                                        <connections>
+                                            <action selector="ajouterPersonneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Fo-LK-t8y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WXP-hK-r0X" secondAttribute="trailing" constant="8" id="1mC-bI-NRG"/>
+                                    <constraint firstItem="hyh-zr-pvb" firstAttribute="top" secondItem="Jql-Kt-XLG" secondAttribute="bottom" constant="20" id="3sU-Ee-2nV"/>
+                                    <constraint firstItem="HI4-fu-8c6" firstAttribute="leading" secondItem="Url-au-wSa" secondAttribute="leading" constant="20" id="9Ji-F3-YXo"/>
+                                    <constraint firstItem="Jql-Kt-XLG" firstAttribute="centerX" secondItem="Url-au-wSa" secondAttribute="centerX" id="9cY-ur-Bbs"/>
+                                    <constraint firstItem="WXP-hK-r0X" firstAttribute="leading" secondItem="Url-au-wSa" secondAttribute="leading" constant="8" id="9oe-qG-BTp"/>
+                                    <constraint firstItem="WXP-hK-r0X" firstAttribute="top" secondItem="g7J-Wk-NqV" secondAttribute="bottom" constant="8" id="Gyb-Ou-y9T"/>
+                                    <constraint firstItem="hyh-zr-pvb" firstAttribute="leading" secondItem="Url-au-wSa" secondAttribute="leading" constant="20" id="OU7-Gh-9U9"/>
+                                    <constraint firstAttribute="trailing" secondItem="HI4-fu-8c6" secondAttribute="trailing" constant="20" id="OZD-HI-qqM"/>
+                                    <constraint firstItem="g7J-Wk-NqV" firstAttribute="leading" secondItem="Url-au-wSa" secondAttribute="leading" id="QJx-3R-o1O"/>
+                                    <constraint firstItem="HI4-fu-8c6" firstAttribute="top" secondItem="hyh-zr-pvb" secondAttribute="bottom" constant="30" id="VHO-fE-pX0"/>
+                                    <constraint firstItem="Jql-Kt-XLG" firstAttribute="top" secondItem="WXP-hK-r0X" secondAttribute="bottom" constant="20" id="ZyF-dv-uxM"/>
+                                    <constraint firstAttribute="trailing" secondItem="g7J-Wk-NqV" secondAttribute="trailing" id="c2k-Ks-t66"/>
+                                    <constraint firstAttribute="bottom" secondItem="HI4-fu-8c6" secondAttribute="bottom" constant="50" id="ifJ-ey-xvR"/>
+                                    <constraint firstItem="g7J-Wk-NqV" firstAttribute="top" secondItem="Url-au-wSa" secondAttribute="top" id="yjb-RV-aBn"/>
+                                    <constraint firstAttribute="trailing" secondItem="hyh-zr-pvb" secondAttribute="trailing" constant="20" id="zJk-wm-D4X"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Url-au-wSa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8FT-8Z-GBP"/>
+                            <constraint firstItem="Url-au-wSa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AJg-Ix-sEP"/>
+                            <constraint firstItem="Url-au-wSa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h85-S3-xLT"/>
+                            <constraint firstItem="Url-au-wSa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qwA-jb-lgp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="AjouterEntreprise" destination="WXP-hK-r0X" id="7of-Mt-03s"/>
+                        <outlet property="ImageDeProfil" destination="Jql-Kt-XLG" id="mes-4S-ixR"/>
+                        <outlet property="PickerView" destination="g7J-Wk-NqV" id="NQb-zl-vbP"/>
+                        <outlet property="Scroll" destination="Url-au-wSa" id="a83-Nm-r4b"/>
+                        <outlet property="ajouterPersonneButton" destination="HI4-fu-8c6" id="2n3-Qq-ssP"/>
+                        <outlet property="contrainteDuBas" destination="qwA-jb-lgp" id="23l-ZK-wpV"/>
+                        <outlet property="largeurContrainte" destination="aR2-l3-wPx" id="slX-Gu-4Uc"/>
+                        <outlet property="mailTextField" destination="efS-zd-b2b" id="SOs-Lf-UeB"/>
+                        <outlet property="nomTextField" destination="VsL-qJ-ViJ" id="fum-oj-rHw"/>
+                        <outlet property="prenomTextField" destination="Qsf-xH-WRE" id="wgV-vT-rCC"/>
+                        <outlet property="telTextField" destination="2pn-gC-AVo" id="ebR-oo-2yz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
