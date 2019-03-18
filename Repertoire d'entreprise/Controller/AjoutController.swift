@@ -23,8 +23,12 @@ class AjoutController: UIViewController {
     @IBOutlet weak var contrainteDuBas: NSLayoutConstraint!
     
     
+    var testPicker = ["Apple","Google","IBM","TheoCorp","Amazon"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        miseEnPlacePicker()
     }
     
     
