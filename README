@@ -1,12 +1,25 @@
 
-# Repertoires d'entreprise 
+#Repertoires d'entreprise 
 
 
-  Premier projet avec core data pour apprendre a stocker les données de façon persistante.
+  Premier projet avec core-Data pour apprendre a stocker les données de façon persistante.
+
 
 
   Application pour enregistrer c'est contact professionnel dans une application dédiée,
   les contacts sont trier par le nom d'entreprise.
+  
+  
+  
+  Page d'accueil de l'application :
+  
+  <img src=" https://user-images.githubusercontent.com/34074097/54717382-54988e00-4b58-11e9-855b-11508b763123.png"                
+  width="180" height="300"/>
+  
+  
+  Le bouton + envoie vers un formulaire d'ajout de contact.
+  
+  
   
   
   
