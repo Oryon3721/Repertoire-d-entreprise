@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AjoutController: UIViewController {
 
@@ -23,12 +24,20 @@ class AjoutController: UIViewController {
     @IBOutlet weak var contrainteDuBas: NSLayoutConstraint!
     
     
-    var testPicker = ["Apple","Google","IBM","TheoCorp","Amazon"]
+    var entreprises = [Entreprise]()
+    // variable ici parce que on ne peux pas creer de var dans les extensions
+    var imagePicker: UIImagePickerController?
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        miseEnPlacePicker()
+        miseEnPlaceImagePicker()
+        miseEnPlacePicker() // initialiser les la Picker View
+        miseEnPlaceNotification()
+        fetchEntreprises() // Reload les données puis les charges
+        miseEnPlaceTextField()
+        
     }
     
     
@@ -40,13 +49,65 @@ class AjoutController: UIViewController {
         Scroll.contentSize = CGSize(width: largeurContrainte.constant, height: Scroll.frame.height)
     }
     
+    func fetchEntreprises() {
+        let requete: NSFetchRequest<Entreprise> = Entreprise.fetchRequest()
+        let tri = NSSortDescriptor(key: "nom", ascending: true) // tri dans l'ordre A..Z les données
+        requete.sortDescriptors = [tri] // appel de la fonction tri
+        do{
+            entreprises = try contexte.fetch(requete)
+            PickerView.reloadAllComponents()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    
+    
+    
     
     
     
     @IBAction func ajouterPersonneEntreprise(_ sender: Any) {
+        let alerte = UIAlertController(title: "Votre entreprise n'est pas dans la liste", message: "Ajouter", preferredStyle: .alert)
+        let ajout = UIAlertAction(title: "OK", style: .default) {(action) in
+            let textField = alerte.textFields![0] as UITextField
+            if let texte = textField.text, texte != ""{
+                let nouvelleEntreprise = Entreprise(context: contexte)
+                nouvelleEntreprise.nom = texte
+                appDelegate.saveContext()
+                self.fetchEntreprises()
+            }
+            
+        }
+        alerte.addTextField {(tf) in
+            tf.placeholder = "Nom de l'entreprises"
+        }
+        let annuler = UIAlertAction(title: "Annuler", style: .default, handler: nil)
+        alerte.addAction(ajout)
+        alerte.addAction(annuler)
+        self.present(alerte,animated: true, completion: nil)
     }
     
     @IBAction func ajouterPersonneAction(_ sender: Any) {
+        view.endEditing(true)
+        let nouvellePersonne = Personne(context: contexte)
+        if prenomTextField.text != nil {
+            nouvellePersonne.prenom = prenomTextField.text!
+        }
+        if nomTextField.text != nil {
+            nouvellePersonne.nom = nomTextField.text!
+        }
+        if let numero = telTextField.text, let numeroInt = Int32(numero)  {
+            nouvellePersonne.numero = numeroInt
+        }
+        if mailTextField.text != nil{
+            nouvellePersonne.mail = mailTextField.text!
+        }
+        nouvellePersonne.photo = ImageDeProfil.image
+        nouvellePersonne.employeur = entreprises[PickerView.selectedRow(inComponent: 0)]
+        
+        appDelegate.saveContext()
+        navigationController?.popViewController(animated: true)
     }
     
     

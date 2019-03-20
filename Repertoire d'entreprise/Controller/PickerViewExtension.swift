@@ -17,7 +17,7 @@ extension AjoutController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     // nombre de choix disponnible egal au nombre d'entree de mon tableau
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return testPicker.count
+        return entreprises.count
     }
     // Nombre de collonnes de ma picker view
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -25,10 +25,11 @@ extension AjoutController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     // Renvoie une string egal au contenue de la ligne de mon tableau
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return testPicker[row]
+        return entreprises[row].nom
     }
     // Quand on choisi un ligne
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("Ligne Choisie:  " + testPicker[row])
+        let nomDeLentreprise = entreprises[row].nom ?? ""
+        print("Ligne Choisie: " + nomDeLentreprise)
     }
 }

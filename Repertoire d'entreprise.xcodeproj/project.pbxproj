@@ -13,7 +13,13 @@
 		240DD9BD222489D3004B5EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 240DD9BC222489D3004B5EA6 /* Assets.xcassets */; };
 		240DD9C0222489D3004B5EA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240DD9BE222489D3004B5EA6 /* LaunchScreen.storyboard */; };
 		240DD9CC222491BA004B5EA6 /* AjoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240DD9CB222491BA004B5EA6 /* AjoutController.swift */; };
+		2419553B22427712007C9B3F /* notificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419553A22427712007C9B3F /* notificationCenterExtension.swift */; };
 		2420FC2B2240466000325886 /* PickerViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2420FC2A2240466000325886 /* PickerViewExtension.swift */; };
+		2423264E2242BB960012B505 /* AccueilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2423264D2242BB960012B505 /* AccueilController.swift */; };
+		242326502242BCA60012B505 /* PersonneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2423264F2242BCA60012B505 /* PersonneCell.swift */; };
+		248A132B2242716200587F5D /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A132A2242716200587F5D /* TextFieldExtension.swift */; };
+		24AC2F472241726A00375EDB /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC2F462241726A00375EDB /* Constantes.swift */; };
+		24AC2F492241843600375EDB /* imagePickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AC2F482241843600375EDB /* imagePickerExtension.swift */; };
 		24B04ADD2236FF4500A10433 /* ImageArrondie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B04ADC2236FF4500A10433 /* ImageArrondie.swift */; };
 		24B04ADF2237015B00A10433 /* ButtonArrondie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B04ADE2237015B00A10433 /* ButtonArrondie.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +33,13 @@
 		240DD9BF222489D3004B5EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		240DD9C1222489D3004B5EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		240DD9CB222491BA004B5EA6 /* AjoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutController.swift; sourceTree = "<group>"; };
+		2419553A22427712007C9B3F /* notificationCenterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationCenterExtension.swift; sourceTree = "<group>"; };
 		2420FC2A2240466000325886 /* PickerViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewExtension.swift; sourceTree = "<group>"; };
+		2423264D2242BB960012B505 /* AccueilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccueilController.swift; sourceTree = "<group>"; };
+		2423264F2242BCA60012B505 /* PersonneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneCell.swift; sourceTree = "<group>"; };
+		248A132A2242716200587F5D /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		24AC2F462241726A00375EDB /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
+		24AC2F482241843600375EDB /* imagePickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePickerExtension.swift; sourceTree = "<group>"; };
 		24B04ADC2236FF4500A10433 /* ImageArrondie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageArrondie.swift; sourceTree = "<group>"; };
 		24B04ADE2237015B00A10433 /* ButtonArrondie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonArrondie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +74,7 @@
 		240DD9B1222489D0004B5EA6 /* Repertoire d'entreprise */ = {
 			isa = PBXGroup;
 			children = (
+				24AC2F452241725300375EDB /* Utilitaire */,
 				240DD9C822248A96004B5EA6 /* View */,
 				240DD9C722248A8F004B5EA6 /* Modele */,
 				240DD9C922248A9E004B5EA6 /* Controller */,
@@ -86,6 +99,7 @@
 			children = (
 				24B04ADC2236FF4500A10433 /* ImageArrondie.swift */,
 				24B04ADE2237015B00A10433 /* ButtonArrondie.swift */,
+				2423264F2242BCA60012B505 /* PersonneCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -95,6 +109,10 @@
 			children = (
 				240DD9CB222491BA004B5EA6 /* AjoutController.swift */,
 				2420FC2A2240466000325886 /* PickerViewExtension.swift */,
+				24AC2F482241843600375EDB /* imagePickerExtension.swift */,
+				248A132A2242716200587F5D /* TextFieldExtension.swift */,
+				2419553A22427712007C9B3F /* notificationCenterExtension.swift */,
+				2423264D2242BB960012B505 /* AccueilController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,6 +124,14 @@
 				240DD9BE222489D3004B5EA6 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		24AC2F452241725300375EDB /* Utilitaire */ = {
+			isa = PBXGroup;
+			children = (
+				24AC2F462241726A00375EDB /* Constantes.swift */,
+			);
+			path = Utilitaire;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,10 +205,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				248A132B2242716200587F5D /* TextFieldExtension.swift in Sources */,
 				240DD9B3222489D0004B5EA6 /* AppDelegate.swift in Sources */,
 				24B04ADD2236FF4500A10433 /* ImageArrondie.swift in Sources */,
 				2420FC2B2240466000325886 /* PickerViewExtension.swift in Sources */,
+				2423264E2242BB960012B505 /* AccueilController.swift in Sources */,
+				24AC2F492241843600375EDB /* imagePickerExtension.swift in Sources */,
+				2419553B22427712007C9B3F /* notificationCenterExtension.swift in Sources */,
+				242326502242BCA60012B505 /* PersonneCell.swift in Sources */,
 				24B04ADF2237015B00A10433 /* ButtonArrondie.swift in Sources */,
+				24AC2F472241726A00375EDB /* Constantes.swift in Sources */,
 				240DD9CC222491BA004B5EA6 /* AjoutController.swift in Sources */,
 				240DD9BB222489D0004B5EA6 /* Repertoire_d_entreprise.xcdatamodeld in Sources */,
 			);
@@ -330,8 +362,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3NM5QV7PF3;
 				INFOPLIST_FILE = "Repertoire d'entreprise/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -349,8 +382,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3NM5QV7PF3;
 				INFOPLIST_FILE = "Repertoire d'entreprise/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
